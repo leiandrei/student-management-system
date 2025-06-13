@@ -90,7 +90,7 @@ Student_db *input(Student_db *records, int *n, int *j)
            }
            
            printf("\nENTER STUDENT INFORMATION\n");
-           
+        // User Inputs
            printf("Enter Student ID: ");
            scanf("%d", &records[*j].id);
            getchar();
@@ -134,6 +134,7 @@ void search(Student_db *records, int n)
                  scanf("%d", &opt);
                  
                  switch(opt) {
+                        // Update Functions
                         case 1: update_name(&records[i]); flag = 1; break;
                         case 2: update_course(&records[i]); flag = 1; break;
                         case 3: update_units(&records[i]); flag = 1; break;
@@ -208,7 +209,7 @@ void update_grades(Student_db *records)
      printf("\nStudent Grades Updated Successfully.\n\n");
 }
 
-void print_to_file(FILE *fptr, Student_db *records, int n)
+void print_to_file(FILE *fptr, Student_db *records, int n) // Print to File Text
 {
      int i = 0;
      fprintf(fptr, "\n=== STUDENT DATABASE ===\n");
@@ -238,8 +239,7 @@ void read_file(FILE *fptr, Student_db *records, int n)
      while(fgets(line, sizeof(line), fptr)) {
           printf("%s", line);
      }
-
-
+        // Print File Text Output
 }
 
 int num_students(int n)
