@@ -27,7 +27,7 @@ int num_students(int n);
 
 int main() {
 
-    FILE *fptr = fopen("test1.txt", "w+");
+    FILE *fptr = fopen("test1.txt", "a+");
     
     if (!fptr) {
        printf("File Opening Failed.\n");
